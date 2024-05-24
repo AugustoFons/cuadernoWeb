@@ -36,7 +36,7 @@ const NoteViewer = () => {
   return (
     <EditorComposer>
       <Editor hashtagsEnabled={true} emojisEnabled={true}>
-        <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'}>
+        <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'} >
           <FontFamilyDropdown />
           <FontSizeDropdown fontSizeOptions={customFontSizes}  />
           <Divider />
@@ -46,8 +46,8 @@ const NoteViewer = () => {
           <CodeFormatButton />
           <InsertLinkButton />
           <TextColorPicker />
-          <BackgroundColorPicker />
-          <TextFormatDropdown />
+{/*           <BackgroundColorPicker />
+ */}      <TextFormatDropdown />
           <Divider />
           <InsertDropdown enablePoll={true} />
           <Divider />
