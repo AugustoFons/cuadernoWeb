@@ -6,8 +6,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  zoom: 0.75;
-}
+/*   zoom: 0.75;
+ */}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,6 +19,7 @@
 
 body {
   background-color: #FADD99;
+  font-size: 24px !important;
 }
 
 .cuaderno {
@@ -97,4 +98,39 @@ body {
 .renglon:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+
+.editor-shell {
+  margin: 20px auto;
+  border-radius: 2px;
+  max-width: 1000px;
+  color: #000;
+  position: relative;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.editor-shell .editor-container {
+  background: transparent !important;
+  position: relative;
+  cursor: text;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.ContentEditable__root{
+  font-size: 24px !important;
+
+}
+.toolbar {
+  display: flex;
+  margin-bottom: 1px;
+  background: #fb8787 !important;
+  padding: 4px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  vertical-align: middle;
+  overflow: auto;
+  height: 40px !important;
 }

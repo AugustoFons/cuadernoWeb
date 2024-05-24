@@ -1,7 +1,10 @@
+import NoteViewer from "@/components/Editor";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-24">
+    <>
+    <NoteViewer/>
+        <main className="flex min-h-screen flex-col justify-between p-24">
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <section style={{display: 'flex', zIndex:1}}>
             <div className='anillado' style={{position: 'relative', flex:1}}>
@@ -26,5 +29,7 @@ export default function Home() {
         </section>
     </ div>
     </main>
+    </>
+
   );
 }
