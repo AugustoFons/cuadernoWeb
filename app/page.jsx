@@ -4,8 +4,9 @@ export default function Home() {
   return (
     <>
       <main className="flex min-h-screen flex-col justify-between p-24">
-      <NoteViewer/>
-
+        <div className="note">
+        <NoteViewer/>
+        </div>
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <section style={{display: 'flex', zIndex:1}}>
             <div className='anillado' style={{position: 'relative', flex:1}}>

@@ -100,7 +100,10 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-
+.note {
+  position: absolute;
+  left: 284px;
+}
 .editor-shell {
   margin: 20px auto;
   border-radius: 2px;
@@ -116,13 +119,17 @@ body {
   position: relative;
   cursor: text;
   display: block;
+  border: 2px solid black !important;
+  height: 228mm;
+  width: 180mm;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  top: 300px;
+  top: 69px;
   z-index: 10 !important;
 }
 .ContentEditable__root{
   font-size: 24px !important;
+  line-height: 80% !important;
 }
 .ContentEditable__root > p  {
   background-color: transparent;
@@ -131,6 +138,7 @@ body {
 
 .toolbar {
   display: flex;
+  position: relative;
   margin-bottom: 1px;
   background: #fb8787 !important;
   padding: 4px;
@@ -139,5 +147,5 @@ body {
   vertical-align: middle;
   overflow: auto;
   height: 40px !important;
-
+  z-index: 20 !important;
 }
