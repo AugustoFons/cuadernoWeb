@@ -15,20 +15,19 @@ export default function Home() {
             </div>
 
             <div className="hoja">
-              <span className='encabezado'></span>
-
+{/*             <span className='encabezado'></span>
                 {
-                  Array(32).fill().map((_, i) => (
+                  Array(30).fill().map((_, i) => (
                     <div key={i} className='renglon content-end overflow-visible '>
-{/*                       <input
+                    <input
                           type="text"
                           placeholder=""
                           required
                           className="relative -bottom-[8px] caret-blue700 outline-none text-2xl h-[26px] bg-transparent overflow-visible text-blue-700 w-full"
-                          /> */}
+                          />
                     </div>                  
                   ))
-                }  
+                }   */}
             </div>
         </section>
     </ div>

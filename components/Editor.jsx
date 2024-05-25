@@ -22,8 +22,6 @@ import {
 
 const NoteViewer = () => {
     const customFontSizes = [
-        ['10px', '10 px'],
-        ['12px', '12 px'],
         ['14px', '14 px'],
         ['16px', '16 px'],
         ['18px', '18 px'],
@@ -35,7 +33,7 @@ const NoteViewer = () => {
       ];
   return (
     <EditorComposer>
-      <Editor hashtagsEnabled={true} emojisEnabled={true}>
+      <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true} children>
         <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'} >
           <FontFamilyDropdown />
           <FontSizeDropdown fontSizeOptions={customFontSizes}  />
@@ -49,6 +47,7 @@ const NoteViewer = () => {
 {/*           <BackgroundColorPicker />
  */}      <TextFormatDropdown />
           <Divider />
+          <BackgroundColorPicker />
           <InsertDropdown enablePoll={true} />
           <Divider />
           <AlignDropdown />

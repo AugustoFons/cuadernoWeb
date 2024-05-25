@@ -79,7 +79,7 @@ body {
 }
 
 .renglon {
-  height: 8mm;
+  height: 8.6mm;
   width: 182mm;
   border: 0.5px solid #d3d3d3;
   border-collapse: collapse;
@@ -103,37 +103,41 @@ body {
 .note {
   position: absolute;
   left: 284px;
+  top:69px;
 }
 .editor-shell {
   margin: 20px auto;
   border-radius: 2px;
   max-width: 1000px;
   color: #000;
-  position: relative;
-  line-height: 20px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .editor-shell .editor-container {
-  background: transparent !important;
-  position: relative;
-  cursor: text;
-  display: block;
-  border: 2px solid black !important;
+/*   background: transparent !important;
+ */  position: relative;
+  left: -40px;
   height: 228mm;
-  width: 180mm;
+  width: 198mm;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  top: 69px;
   z-index: 10 !important;
 }
+
 .ContentEditable__root{
   font-size: 24px !important;
-  line-height: 80% !important;
+  height: 300mm;
+  resize: none !important;
 }
-.ContentEditable__root > p  {
-  background-color: transparent;
-  width: max-content;
+
+.ContentEditable__root > p {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: start;
 }
 
 .toolbar {
@@ -148,4 +152,17 @@ body {
   overflow: auto;
   height: 40px !important;
   z-index: 20 !important;
+  left: -140px;
+}
+
+.PlaygroundEditorTheme__h1 {
+  font-size: 36px !important;
+}
+
+.PlaygroundEditorTheme__h2 {
+  font-size: 32px !important;
+}
+
+.PlaygroundEditorTheme__h3 {
+  font-size: 28px !important;
 }
