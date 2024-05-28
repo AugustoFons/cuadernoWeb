@@ -17,7 +17,7 @@ import {
   TextFormatDropdown,
   UnderlineButton,
   Divider
-} from 'verbum';
+} from '../utils/verbum2';
 
 
 const NoteViewer = () => {
@@ -32,15 +32,12 @@ const NoteViewer = () => {
         ['36px', '36 px']
       ];
 
-    const customFontOptions = [
-      []
-    ]
 
   return (
     <EditorComposer>
       <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true}>
         <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'} >
-          <FontFamilyDropdown fontOptions={customFontOptions} />
+          <FontFamilyDropdown  />
           <FontSizeDropdown fontSizeOptions={customFontSizes}  />
           <Divider />
           <BoldButton />

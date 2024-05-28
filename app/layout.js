@@ -1,7 +1,7 @@
-import { Nanum_Pen_Script } from "next/font/google";
+import { Playpen_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Nanum_Pen_Script({ subsets: ["latin"], weight: ['400'] });
+const inter = Playpen_Sans({ subsets: ["latin"], weight: ['400'] });
 
 export const metadata = {
   title: "Create Next App",

@@ -16,7 +16,7 @@ export default function Home() {
             <div className="hoja">
             <span className='encabezado'></span>
                 {
-                  Array(30).fill().map((_, i) => (
+                  Array(32).fill().map((_, i) => (
                     <div key={i} className='renglon content-end overflow-visible '>
                     <input
                           type="text"
