@@ -31,11 +31,16 @@ const NoteViewer = () => {
         ['32px', '32 px'],
         ['36px', '36 px']
       ];
+
+    const customFontOptions = [
+      []
+    ]
+
   return (
     <EditorComposer>
-      <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true} children>
+      <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true}>
         <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'} >
-          <FontFamilyDropdown />
+          <FontFamilyDropdown fontOptions={customFontOptions} />
           <FontSizeDropdown fontSizeOptions={customFontSizes}  />
           <Divider />
           <BoldButton />
@@ -44,8 +49,7 @@ const NoteViewer = () => {
           <CodeFormatButton />
           <InsertLinkButton />
           <TextColorPicker />
-{/*           <BackgroundColorPicker />
- */}      <TextFormatDropdown />
+          <TextFormatDropdown />
           <Divider />
           <BackgroundColorPicker />
           <InsertDropdown enablePoll={true} />
@@ -53,7 +57,6 @@ const NoteViewer = () => {
           <AlignDropdown />
         </ToolbarPlugin>
       </Editor>
-        
     </EditorComposer>
   );
 };

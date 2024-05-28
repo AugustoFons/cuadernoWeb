@@ -79,7 +79,7 @@ body {
 }
 
 .renglon {
-  height: 8.6mm;
+  height: 8mm;
   width: 182mm;
   border: 0.5px solid #d3d3d3;
   border-collapse: collapse;
@@ -102,8 +102,8 @@ body {
 
 .note {
   position: absolute;
-  left: 284px;
-  top:69px;
+  left: 324px;
+  top:180px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -117,8 +117,8 @@ body {
 }
 
 .editor-shell .editor-container {
-/*   background: transparent !important;
- */  position: relative;
+  background: transparent !important;
+  position: relative;
   left: -40px;
   height: 228mm;
   width: 198mm;
@@ -138,6 +138,10 @@ body {
   margin: 0 !important;
   margin-bottom: 0 !important;
   text-align: start;
+}
+.ContentEditable__root > p > span {
+
+  line-height: 8mm !important;
 }
 
 .toolbar {

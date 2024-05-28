@@ -13,9 +13,8 @@ export default function Home() {
               <img src={'/assets/anillados.png'} alt='' style={{height:'100%', backgroundColor:'#FADD99', zIndex:0}}/>
               <div className='cuaderno'></div>
             </div>
-
             <div className="hoja">
-{/*             <span className='encabezado'></span>
+            <span className='encabezado'></span>
                 {
                   Array(30).fill().map((_, i) => (
                     <div key={i} className='renglon content-end overflow-visible '>
@@ -27,7 +26,7 @@ export default function Home() {
                           />
                     </div>                  
                   ))
-                }   */}
+                }  
             </div>
         </section>
     </ div>
