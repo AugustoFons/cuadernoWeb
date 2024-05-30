@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  line-height: 8mm !important;
 /*   zoom: 0.75;
  */}
 
@@ -43,7 +44,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: end;
-  padding-top: 15mm;
+  padding-top: 13mm;
   padding-right: 6mm;
   border: 3px double #d3d3d3;
   border-left: 2px dashed #d3d3d3;
@@ -66,9 +67,9 @@ body {
 
 .encabezado{
   text-align: start;
-  height: 16mm;
+  height: 22mm;
   width: 182mm;
-  margin-bottom: 1.5mm;
+  margin-bottom: 2.5mm;
   border: 0.5px solid #d3d3d3;
   border-collapse: collapse;
   background-color: white;
@@ -102,8 +103,8 @@ body {
 
 .note {
   position: absolute;
-  left: 324px;
-  top:107px;
+  left: 310px;
+  top:35px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -114,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 78px;
+  width: 100%;
 }
 
 .editor-shell .editor-container {

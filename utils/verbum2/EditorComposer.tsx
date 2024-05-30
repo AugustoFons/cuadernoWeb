@@ -8,11 +8,23 @@ import PlaygroundEditorTheme from './themes/PlaygroundEditorTheme';
 import './EditorComposer.css';
 import i18n from './locale';
 import { I18nextProvider } from 'react-i18next';
+import { $getRoot, $getSelection, $createParagraphNode, $createTextNode } from 'lexical';
 
 interface IEditorComposer {
   children: React.ReactElement;
   initialEditorState?: InitialEditorStateType;
 }
+const initializeEditorState = (editor: any) => {
+  editor.update(() => {
+    const root = $getRoot();
+    for (let i = 0; i < 32; i++) {
+      const paragraph = $createParagraphNode();
+      const textNode = $createTextNode("  ");
+      paragraph.append(textNode);
+      root.append(paragraph);
+    }
+
+})}
 
 const EditorComposer = ({ children, initialEditorState }: IEditorComposer) => {
   const initialConfig = {
@@ -22,7 +34,7 @@ const EditorComposer = ({ children, initialEditorState }: IEditorComposer) => {
       throw error;
     },
     theme: PlaygroundEditorTheme,
-    editorState: initialEditorState,
+    editorState: initialEditorState || initializeEditorState,
   };
   return (
     <LexicalComposer initialConfig={initialConfig}>

@@ -19,7 +19,6 @@ import {
   Divider
 } from '../utils/verbum2';
 
-
 const NoteViewer = () => {
     const customFontSizes = [
         ['14px', '14 px'],
@@ -34,9 +33,9 @@ const NoteViewer = () => {
 
 
   return (
-    <EditorComposer>
+    <EditorComposer  >
       <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true}>
-        <ToolbarPlugin defaultFontSize="24px" defaultBgColor={'transparent'} >
+        <ToolbarPlugin defaultFontSize="20px" defaultBgColor={'transparent'} >
           <FontFamilyDropdown  />
           <FontSizeDropdown fontSizeOptions={customFontSizes}  />
           <Divider />
