@@ -17,9 +17,9 @@ interface IEditorComposer {
 const initializeEditorState = (editor: any) => {
   editor.update(() => {
     const root = $getRoot();
-    for (let i = 0; i < 32; i++) {
+    for (let i = 0; i < 4; i++) {
       const paragraph = $createParagraphNode();
-      const textNode = $createTextNode("  ");
+      const textNode = $createTextNode("");
       paragraph.append(textNode);
       root.append(paragraph);
     }

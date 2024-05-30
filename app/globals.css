@@ -121,9 +121,9 @@ body {
 .editor-shell .editor-container {
   background: transparent !important;
   position: relative;
-  left: -40px;
-  height: 228mm;
-  width: 198mm;
+  left: -33px;
+  height: 272mm;
+  width: 188mm;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   z-index: 10 !important;
@@ -140,10 +140,13 @@ body {
   margin: 0 !important;
   margin-bottom: 0 !important;
   text-align: start;
+  height: 8mm !important;
 }
-.ContentEditable__root > p > span {
+.ContentEditable__root > p > span, h1 {
 
   line-height: 8mm !important;
+  height: 8mm !important;
+
 }
 
 .toolbar {
@@ -163,12 +166,25 @@ body {
 
 .PlaygroundEditorTheme__h1 {
   font-size: 36px !important;
+  line-height: 8mm !important;
+  height: 8mm !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .PlaygroundEditorTheme__h2 {
-  font-size: 32px !important;
-}
+  font-size: 36px !important;
+  line-height: 8mm !important;
+  height: 8mm !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;}
 
 .PlaygroundEditorTheme__h3 {
-  font-size: 28px !important;
-}
+  font-size: 36px !important;
+  line-height: 8mm !important;
+  height: 8mm !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;}
