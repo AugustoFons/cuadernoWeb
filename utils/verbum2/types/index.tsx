@@ -1,3 +1,3 @@
-import FontOptions from './FontOptions';
+type FontOptions = Array<[string, string]>;
 
-export { FontOptions };
+export default FontOptions;

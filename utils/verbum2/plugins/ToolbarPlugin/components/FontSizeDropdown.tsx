@@ -4,17 +4,13 @@ import ToolbarContext from '../../../context/ToolbarContext';
 import { FontOptions } from '../../../types';
 
 const defaultFontSizeOptions: FontOptions = [
-  ['10px', '10px'],
-  ['11px', '11px'],
-  ['12px', '12px'],
-  ['13px', '13px'],
-  ['14px', '14px'],
-  ['15px', '15px'],
-  ['16px', '16px'],
-  ['17px', '17px'],
-  ['18px', '18px'],
-  ['19px', '19px'],
-  ['20px', '20px'],
+  ['14px', '14 px'],
+  ['16px', '16 px'],
+  ['18px', '18 px'],
+  ['20px', '20 px'],
+  ['24px', '24 px'],
+  ['28px', '28 px'],
+  ['32px', '32 px'],
 ];
 
 interface IFontSizeDropdown {

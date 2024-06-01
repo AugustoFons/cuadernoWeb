@@ -43,9 +43,6 @@ const supportedBlockTypes = new Set([
   'paragraph',
   'quote',
   'code',
-  'h1',
-  'h2',
-  'h3',
   'bullet',
   'number',
   'check',
@@ -69,10 +66,10 @@ interface IToolbarProps {
 
 const ToolbarPlugin = ({
   children,
-  defaultFontSize = '15px',
+  defaultFontSize = '20px',
   defaultFontColor = '#000',
-  defaultBgColor = '#fff',
-  defaultFontFamily = 'Arial',
+  defaultBgColor = 'transparent',
+  defaultFontFamily = '"__Playpen_Sans_f6f7db", "__Playpen_Sans_Fallback_f6f7db"',
 }: IToolbarProps) => {
   const [insertExists, InsertComponent] = useChild(children, InsertDropdown);
   const [alignExists, AlignComponent] = useChild(children, AlignDropdown);

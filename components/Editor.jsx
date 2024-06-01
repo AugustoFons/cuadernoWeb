@@ -20,24 +20,15 @@ import {
 } from '../utils/verbum2';
 
 const NoteViewer = () => {
-    const customFontSizes = [
-        ['14px', '14 px'],
-        ['16px', '16 px'],
-        ['18px', '18 px'],
-        ['20px', '20 px'],
-        ['24px', '24 px'],
-        ['28px', '28 px'],
-        ['32px', '32 px'],
-        ['36px', '36 px']
-      ];
+
 
 
   return (
     <EditorComposer  >
-      <Editor hashtagsEnabled={true} emojisEnabled={true} actionsEnabled={true}>
-        <ToolbarPlugin defaultFontSize="20px" defaultBgColor={'transparent'} >
+      <Editor>
+        <ToolbarPlugin >
           <FontFamilyDropdown  />
-          <FontSizeDropdown fontSizeOptions={customFontSizes}  />
+          <FontSizeDropdown  />
           <Divider />
           <BoldButton />
           <ItalicButton />

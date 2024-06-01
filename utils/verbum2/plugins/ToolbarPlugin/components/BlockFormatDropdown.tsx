@@ -11,7 +11,6 @@ import {
   $createParagraphNode,
   $getSelection,
   $isRangeSelection,
-  LexicalEditor,
 } from 'lexical';
 import React, { useContext } from 'react';
 import EditorContext from '../../../context/EditorContext';
@@ -30,18 +29,6 @@ const BlockFormatDropdown = () => {
 
         if ($isRangeSelection(selection)) {
           $wrapNodes(selection, () => $createParagraphNode());
-        }
-      });
-    }
-  };
-
-  const formatHeading = (headingSize) => {
-    if (blockType !== headingSize) {
-      initialEditor.update(() => {
-        const selection = $getSelection();
-
-        if ($isRangeSelection(selection)) {
-          $wrapNodes(selection, () => $createHeadingNode(headingSize));
         }
       });
     }
@@ -114,39 +101,6 @@ const BlockFormatDropdown = () => {
         <span className="icon paragraph" />
         <span className="text">{t('toolbar:blockFormatDropdown.paragraph')}</span>
         {blockType === 'paragraph' && <span className="active" />}
-      </button>
-      <button
-        className="item"
-        onClick={() => formatHeading('h1')}
-        type="button"
-      >
-        <span className="icon h1" />
-        <span className="text">
-          {t('toolbar:blockFormatDropdown.h1')}
-        </span>
-        {blockType === 'h1' && <span className="active" />}
-      </button>
-      <button
-        className="item"
-        onClick={() => formatHeading('h2')}
-        type="button"
-      >
-        <span className="icon h2" />
-        <span className="text">
-          {t('toolbar:blockFormatDropdown.h2')}
-        </span>
-        {blockType === 'h2' && <span className="active" />}
-      </button>
-      <button
-        className="item"
-        onClick={() => formatHeading('h3')}
-        type="button"
-      >
-        <span className="icon h3" />
-        <span className="text">
-          {t('toolbar:blockFormatDropdown.h3')}
-        </span>
-        {blockType === 'h3' && <span className="active" />}
       </button>
       <button className="item" onClick={formatBulletList} type="button">
         <span className="icon bullet-list" />
