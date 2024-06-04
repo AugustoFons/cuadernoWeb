@@ -7,8 +7,9 @@
   padding: 2rem;
   text-align: center;
   line-height: 8mm !important;
-/*   zoom: 0.75;
- */}
+  zoom: 0.75;
+
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -59,10 +60,11 @@ body {
 }
 
 .anillado {
-  background-color: white;
-  height: 296mm;
+/*   background-color: white;
+ */  height: 296mm;
   width: 106px;
   z-index: -1;
+  left: 2px;
 }
 
 .encabezado{
@@ -103,8 +105,8 @@ body {
 
 .note {
   position: absolute;
-  left: 310px;
-  top:15.7px;
+  left: 247px;
+  top:42.7px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -114,7 +116,7 @@ body {
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  gap: 78px;
+  gap: 46px;
   width: 100%;
 }
 
@@ -150,14 +152,14 @@ body {
   display: flex;
   position: relative;
   margin-bottom: 1px;
-  background: #fb8787 !important;
-  padding: 4px;
+/*   background: #ffffff !important;
+ */  padding: 4px;
   margin-bottom: 10px;
   border-radius: 10px;  
   vertical-align: middle;
   overflow: auto;
-  height: 60px !important;
+  height: 66px !important;
   z-index: 20 !important;
-  left: -140px;
+  left: -180px;
   align-items: center;
 }
