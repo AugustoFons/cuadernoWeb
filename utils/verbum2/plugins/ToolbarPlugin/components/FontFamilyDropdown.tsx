@@ -30,13 +30,16 @@ const FontFamilyDropdown = ({
 
   return (
     <>
-      <Select
+    <div className='flex items-center '>
+    <Select
         className="toolbar-item font-family"
         onChange={onFontFamilySelect}
         options={fontOptions}
         value={fontFamily}
       />
-      <i className="chevron-down inside" />
+      <div className='border-1 border-black h-2 w-2'><i className="chevron-down inside relative top-3" /></div>
+    </div>
+
     </>
   );
 };

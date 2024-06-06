@@ -106,7 +106,7 @@ body {
 .note {
   position: absolute;
   left: 247px;
-  top:42.7px;
+  top:32px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -136,30 +136,7 @@ body {
   height: 300mm;
   resize: none !important;
 }
-/* 
-.ContentEditable__root > p {
-  padding: 0 !important;
-  margin: 0 !important;
-  margin-bottom: 0 !important;
-  text-align: start;
-  height: 8mm !important;
-/*   padding-bottom: 4px !important;
- */
 
 
 
-.toolbar {
-  display: flex;
-  position: relative;
-  margin-bottom: 1px;
-/*   background: #ffffff !important;
- */  padding: 4px;
-  margin-bottom: 10px;
-  border-radius: 10px;  
-  vertical-align: middle;
-  overflow: auto;
-  height: 66px !important;
-  z-index: 20 !important;
-  left: -180px;
-  align-items: center;
-}
+
