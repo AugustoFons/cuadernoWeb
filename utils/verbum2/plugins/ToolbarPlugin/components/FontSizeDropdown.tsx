@@ -31,6 +31,7 @@ const FontSizeDropdown = ({
 
   return (
     <>
+      <div className='flex'>
       <Select
         className="toolbar-item font-size"
         onChange={onFontSizeSelect}
@@ -38,6 +39,8 @@ const FontSizeDropdown = ({
         value={fontSize}
       />
       <i className="chevron-down inside" />
+      <div><i className="chevron-down inside " /></div>
+    </div>
     </>
   );
 };

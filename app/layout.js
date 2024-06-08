@@ -1,5 +1,6 @@
 import { Playpen_Sans } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const inter = Playpen_Sans({ subsets: ["latin"], weight: ['400'] });
 
@@ -11,7 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <Image 
+          src='/assets/cartel.png'
+          width={300}
+          height={125}
+          alt="line"
+          className="ml-3 mt-0 h-[125px] w-[300px]"
+          />
+        {children}
+      </body>
     </html>
   );
 }
