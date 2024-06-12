@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <Image 
-          src='/assets/cartel.png'
-          width={300}
-          height={125}
+          src='/assets/esc.png'
+          width={206}
+          height={120}
           alt="line"
-          className="ml-3 mt-0 h-[125px] w-[300px]"
+          className="ml-1 pt-0 pb-3 h-[104px] w-[190px]"
           />
         {children}
       </body>

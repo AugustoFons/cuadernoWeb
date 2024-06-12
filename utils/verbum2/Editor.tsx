@@ -36,7 +36,7 @@ import Placeholder from './ui/Placeholder';
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import EditorContext from './context/EditorContext';
-import { LexicalEditor } from 'lexical';
+import { EditorState, LexicalEditor } from 'lexical';
 import { useTranslation } from 'react-i18next';
 import DragDropPaste from './plugins/DragDropPastePlugin';
 import EmojiPickerPlugin from './plugins/EmojiPickerPlugin';
@@ -71,7 +71,7 @@ const Editor = ({
   const [editor] = useLexicalComposerContext();
   const [activeEditor, setActiveEditor] = useState(editor);
 
-  const editorStateRef = useRef(null);
+  const editorStateRef = useRef<EditorState | null>(null);
   const { historyState } = useSharedHistoryContext();
   const {
     settings: { isRichText },

@@ -3,7 +3,7 @@ import NoteViewer from "@/components/Editor";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col justify-between py-4 px-8">
+      <main className="flex min-h-screen w-full py-4 px-8">
       <div className="note">
       <NoteViewer/>
       </div>

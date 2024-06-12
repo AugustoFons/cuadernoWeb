@@ -7,7 +7,7 @@
 
  */
 
-import { DEFAULT_SETTINGS } from './appSettings';
+/* import { DEFAULT_SETTINGS } from './appSettings';
 
 // override default options with query parameters if any
 const urlSearchParams = new URLSearchParams(window.location.search);
@@ -25,4 +25,4 @@ for (const param of Object.keys(DEFAULT_SETTINGS)) {
 
 if (DEFAULT_SETTINGS.disableBeforeInput) {
   delete window.InputEvent.prototype.getTargetRanges;
-}
+} */

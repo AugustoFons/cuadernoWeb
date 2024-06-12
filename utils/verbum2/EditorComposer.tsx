@@ -30,7 +30,7 @@ const EditorComposer = ({ children, initialEditorState }: IEditorComposer) => {
   const initialConfig = {
     namespace: 'VerbumEditor',
     nodes: [...PlaygroundNodes],
-    onError: (error) => {
+    onError: (error : any) => {
       throw error;
     },
     theme: PlaygroundEditorTheme,
