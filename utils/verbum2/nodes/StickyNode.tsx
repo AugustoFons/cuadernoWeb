@@ -30,7 +30,7 @@ import {
   createEditor,
   DecoratorNode,
 } from 'lexical';
-import { Spread } from 'libdefs/globals';
+import { Spread } from '../libdefs/globals';
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
@@ -42,7 +42,7 @@ import StickyEditorTheme from '../themes/StickyEditorTheme';
 import ContentEditable from '../ui/ContentEditable';
 import Placeholder from '../ui/Placeholder';
 
-function positionSticky(stickyElem: HTMLElement, positioning): void {
+function positionSticky(stickyElem: HTMLElement, positioning: any): void {
   const style = stickyElem.style;
   const rootElementRect = positioning.rootElementRect;
   const rectLeft = rootElementRect !== null ? rootElementRect.left : 0;

@@ -16,8 +16,8 @@ type ContextShape = {
   historyState: HistoryState;
 };
 
-const Context: React.Context<ContextShape> = createContext({
-  historyState: { current: null, redoStack: [], undoStack: [] },
+const Context = createContext<ContextShape>({
+  historyState: createEmptyHistoryState(),
 });
 
 export const SharedHistoryContext = ({

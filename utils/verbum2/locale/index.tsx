@@ -28,7 +28,7 @@ export const resources = {
 export const languageDetector = {
   type: 'languageDetector',
   async: true,
-  detect: (callback) => {
+  detect: (callback : any) => {
     const language = navigator.language;
     callback(language.substring(0, 2));
   },

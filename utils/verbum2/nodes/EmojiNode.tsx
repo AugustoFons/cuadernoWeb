@@ -6,22 +6,9 @@
  *
  */
 
-import React from 'react';
 
 import type { EditorConfig, LexicalNode, NodeKey } from 'lexical';
-
-import SerializedTextNode from 'lexical';
-
-import { Spread } from 'globals';
 import { TextNode } from 'lexical';
-
-export type SerializedEmojiNode = Spread<
-  {
-    className: string;
-    type: 'emoji';
-  },
-  typeof SerializedTextNode
->;
 
 let __className: string = 'EmojiNode';
 export class EmojiNode extends TextNode {
@@ -60,7 +47,7 @@ export class EmojiNode extends TextNode {
     return false;
   }
 
-  static importJSON(serializedNode: SerializedEmojiNode): EmojiNode {
+  static importJSON(serializedNode: any): EmojiNode {
     const node = $createEmojiNode(
       serializedNode.className,
       serializedNode.text
@@ -72,7 +59,7 @@ export class EmojiNode extends TextNode {
     return node;
   }
 
-  exportJSON(): SerializedEmojiNode {
+  exportJSON(): any {
     return {
       ...super.exportJSON(),
       className: this.getClassName(),

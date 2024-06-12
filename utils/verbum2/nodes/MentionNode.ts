@@ -8,31 +8,14 @@
 
 import type { EditorConfig, LexicalNode, NodeKey } from 'lexical';
 
-import SerializedTextNode from 'lexical';
-
-import { Spread } from 'globals';
 import { TextNode } from 'lexical';
 
-export type SerializedMentionNode = Spread<
-  {
-    mentionName: string;
-    type: 'mention';
-    version: 1;
-  },
-  typeof SerializedTextNode
->;
-
-type PopoverCard = {
-  card: HTMLElement;
-  leftOffset: number;
-  topOffset: number;
-};
 
 const mentionStyle = 'background-color: rgba(24, 119, 232, 0.2)';
 
 export class MentionNode extends TextNode {
   __mention: string;
-  __popoverCard: PopoverCard;
+  __popoverCard: any;
 
   static getType(): string {
     return 'mention';
@@ -42,7 +25,7 @@ export class MentionNode extends TextNode {
     return new MentionNode(node.__mention, undefined, node.__text, node.__key);
   }
 
-  static importJSON(serializedNode: SerializedMentionNode): MentionNode {
+  static importJSON(serializedNode: any): MentionNode {
     const node = $createMentionNode(serializedNode.mentionName);
     node.setTextContent(serializedNode.text);
     node.setFormat(serializedNode.format);
@@ -54,7 +37,7 @@ export class MentionNode extends TextNode {
 
   constructor(
     mentionName: string,
-    popover?: PopoverCard,
+    popover?: any,
     text?: string,
     key?: NodeKey
   ) {
@@ -68,7 +51,7 @@ export class MentionNode extends TextNode {
     }
   }
 
-  exportJSON(): SerializedMentionNode {
+  exportJSON(): any {
     return {
       ...super.exportJSON(),
       mentionName: this.__mention,
@@ -110,7 +93,7 @@ export class MentionNode extends TextNode {
 
 export function $createMentionNode(
   mentionName: string,
-  popover?: PopoverCard
+  popover?: any
 ): MentionNode {
   const mentionNode = new MentionNode(mentionName, popover);
   mentionNode.setMode('segmented').toggleDirectionless();

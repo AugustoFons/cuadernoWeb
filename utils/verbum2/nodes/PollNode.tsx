@@ -20,7 +20,7 @@ import './PollNode.css';
 import { useCollaborationContext } from '@lexical/react/LexicalCollaborationContext';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { $getNodeByKey, DecoratorNode } from 'lexical';
-import { Spread } from 'libdefs/globals';
+import { Spread } from '../libdefs/globals';
 import * as React from 'react';
 import { useMemo, useRef } from 'react';
 
@@ -79,7 +79,7 @@ function PollOptionComponent({
   option: Option;
   options: Options;
   totalVotes: number;
-  withPollNode: (cb: (PollNode) => void) => void;
+  withPollNode: (cb: (PollNode: any) => void) => void;
 }): JSX.Element {
   const { clientID } = useCollaborationContext();
   const checkboxRef = useRef(null);
@@ -209,7 +209,7 @@ export type SerializedPollNode = Spread<
 >;
 
 function convertPollElement(domNode: HTMLElement): DOMConversionOutput {
-  const question = domNode.getAttribute('data-lexical-poll-question');
+  const question : any = domNode.getAttribute('data-lexical-poll-question');
   const node = $createPollNode(question);
   return { node };
 }

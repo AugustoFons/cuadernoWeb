@@ -7,18 +7,8 @@
  */
 
 import type { EditorConfig } from 'lexical';
-import SerializedTextNode from 'lexical';
-
-import { Spread } from 'globals';
 import { TextNode } from 'lexical';
 
-export type SerializedTypeaheadNode = Spread<
-  {
-    type: 'typeahead';
-    version: 1;
-  },
-  typeof SerializedTextNode
->;
 
 export class TypeaheadNode extends TextNode {
   static clone(node: TypeaheadNode): TypeaheadNode {
@@ -29,7 +19,7 @@ export class TypeaheadNode extends TextNode {
     return 'typeahead';
   }
 
-  static importJSON(serializedNode: SerializedTypeaheadNode): TypeaheadNode {
+  static importJSON(serializedNode: any): TypeaheadNode {
     const node = $createTypeaheadNode(serializedNode.text);
     node.setFormat(serializedNode.format);
     node.setDetail(serializedNode.detail);
@@ -38,7 +28,7 @@ export class TypeaheadNode extends TextNode {
     return node;
   }
 
-  exportJSON(): SerializedTypeaheadNode {
+  exportJSON(): any {
     return {
       ...super.exportJSON(),
       type: 'typeahead',

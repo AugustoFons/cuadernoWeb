@@ -5,21 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
-
 import type { EditorConfig, LexicalNode } from 'lexical';
-
-import SerializedTextNode from 'lexical';
-
-import { Spread } from 'globals';
 import { TextNode } from 'lexical';
 
-export type SerializedKeywordNode = Spread<
-  {
-    type: 'keyword';
-    version: 1;
-  },
-  typeof SerializedTextNode
->;
 
 export class KeywordNode extends TextNode {
   static getType(): string {
@@ -30,7 +18,7 @@ export class KeywordNode extends TextNode {
     return new KeywordNode(node.__text, node.__key);
   }
 
-  static importJSON(serializedNode: SerializedKeywordNode): KeywordNode {
+  static importJSON(serializedNode: any): KeywordNode {
     const node = $createKeywordNode(serializedNode.text);
     node.setFormat(serializedNode.format);
     node.setDetail(serializedNode.detail);
@@ -39,7 +27,7 @@ export class KeywordNode extends TextNode {
     return node;
   }
 
-  exportJSON(): SerializedKeywordNode {
+  exportJSON(): any {
     return {
       ...super.exportJSON(),
       type: 'keyword',

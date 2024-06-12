@@ -1,5 +1,5 @@
 /* eslint-disable strict */
-declare type WindowSelection = {
+/* declare type WindowSelection = {
   anchorNode: Node | null,
   anchorOffset: number,
   focusNode: Node | null,
@@ -8,4 +8,4 @@ declare type WindowSelection = {
   // Note that this is non-exhaustive, I just defined
   // what we use. Used MDN for reference:
   // https://developer.mozilla.org/en-US/docs/Web/API/Selection
-};
+}; */
