@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
-/* 
 import type { LexicalEditor } from 'lexical';
 
 import { TOGGLE_CONNECT_COMMAND } from '@lexical/yjs';
@@ -450,4 +449,3 @@ export function useCommentStore(commentStore: CommentStore): Comments {
 
   return comments;
 }
- */
