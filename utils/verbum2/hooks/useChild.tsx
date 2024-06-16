@@ -2,9 +2,9 @@ import React, { Children, ReactElement } from 'react';
 import { useEffect, useState } from 'react';
 
 const useChild = <T,>(
-  children: ReactElement | ReactElement[],
+  children: any | ReactElement[],
   childCandidate: any
-): [boolean, T] => {
+): [boolean, T | null] => {
   const [matchedChild, setMatchedChild] = useState(null);
   const [matched, setMatched] = useState(false);
 

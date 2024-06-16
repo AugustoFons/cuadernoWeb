@@ -32,7 +32,7 @@ const getElement = (): HTMLElement => {
 };
 
 export default function useReport(): (arg0: string) => NodeJS.Timeout {
-  const timer = useRef<NodeJS.Timeout | null>(null);
+  const timer: any = useRef<NodeJS.Timeout | null>(null);
   const cleanup = useCallback(() => {
     clearTimeout(timer.current);
 

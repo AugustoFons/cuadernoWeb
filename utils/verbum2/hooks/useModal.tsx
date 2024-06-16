@@ -25,7 +25,7 @@ export default function useModal(): [
     setModalContent(null);
   }, []);
 
-  const modal = useMemo(() => {
+  const modal: any = useMemo(() => {
     if (modalContent === null) {
       return null;
     }
@@ -43,7 +43,7 @@ export default function useModal(): [
 
   const showModal = useCallback(
     (
-      title,
+      title: any,
       // eslint-disable-next-line no-shadow
       getContent: (onClose: () => void) => JSX.Element,
       closeOnClickOutside = false
