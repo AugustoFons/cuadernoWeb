@@ -1,8 +1,14 @@
-import { Playpen_Sans } from "next/font/google";
+import { Playpen_Sans, Pacifico, Lobster_Two, Merienda, Sofia } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 
-const inter = Playpen_Sans({ subsets: ["latin"], weight: ['400'] });
+const playpen = Playpen_Sans({ subsets: ["latin"], weight: ['400'] });
+const pacifico = Pacifico({ subsets: ["latin"], weight: ['400'] });
+const lobster = Lobster_Two({ subsets: ["latin"], weight: ['400'] });
+const merienda = Merienda({ subsets: ["latin"], weight: ['400'] });
+const sofia = Sofia({ subsets: ["latin"], weight: ['400'], variable: '--font-sofia' });
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={playpen.className}>
       <Image 
           src='/assets/esc.png'
           width={206}

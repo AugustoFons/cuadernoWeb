@@ -3,15 +3,17 @@ import NoteViewer from "@/components/Editor";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen w-full py-4 px-8">
+      <main className="flex min-h-screen w-full py-4">
       <div className="note">
       <NoteViewer/>
       </div>
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <section style={{display: 'flex', zIndex:1}}>
-            <div className='anillado' style={{position: 'relative', flex:1}}>
-              <img src={'/assets/anillados.png'} alt='' style={{height:'100%', backgroundColor:'transparent', zIndex:0}}/>
+            <div className='' style={{position: 'relative', flex:1}}>
               <div className='cuaderno'></div>
+            </div>
+            <div className='anillado' style={{position: 'relative', flex:1}}>
+            <img src={'/assets/an.png'} alt='' style={{height:'100%', backgroundColor:'transparent', zIndex:0}}/>
             </div>
             <div className="hoja">
             <span className='encabezado'></span>

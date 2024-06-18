@@ -1,15 +1,14 @@
 import React, { useCallback, useContext } from 'react';
 import Select from '../../../ui/Select';
 import ToolbarContext from '../../../context/ToolbarContext';
-import { FontOptions } from '../../../types';
+import FontOptions from '../../../types';
 
 const defaultFontFamilyOptions: FontOptions = [
-  ['"__Playpen_Sans_f6f7db", "__Playpen_Sans_Fallback_f6f7db"', 'Imprenta'],
-  ['Courier New', 'Courier New'],
-  ['Georgia', 'Georgia'],
-  ['Times New Roman', 'Times New Roman'],
-  ['Trebuchet MS', 'Trebuchet MS'],
-  ['Verdana', 'Verdana'],
+  ['"__Playpen_Sans_f6f7db", "__Playpen_Sans_Fallback_f6f7db"', 'PlayPen'],
+  ["'__Merienda_97fe5c', '__Merienda_Fallback_97fe5c'", 'Merienda'],
+  ["'__Sofia_ed0e3a', '__Sofia_Fallback_ed0e3a'", 'Sofia'],
+  ["'__Pacifico_335c89', '__Pacifico_Fallback_335c89'", 'Pacifico'],
+  ["'__Lobster_Two_154cec', '__Lobster_Two_Fallback_154cec'", 'Lobster'],
 ];
 
 interface IFontFamilyDropdown {

@@ -4,7 +4,7 @@
 
 :root {
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: center;
   line-height: 8mm !important;
   zoom: 0.80;
@@ -32,10 +32,10 @@ body {
 .cuaderno {
   background-color: rgb(232, 231, 231);
   height: 303mm;
-  width: 204mm;
+  width: 211mm;
   z-index: -10;
   position: absolute;
-  left: 111px;
+  left: 131px;
   top: -9px;
   border:4px solid #93939365;
   border-bottom: 8px solid rgba(146, 145, 145, 0.379);
@@ -53,23 +53,31 @@ body {
   padding-top: 22mm;
   padding-right: 6mm;
   border: 3px double #d3d3d3;
-  border-left: 2px dashed #d3d3d3;
   border-top: none;
   border-bottom: none;
   border-radius: 0px 10px 10px 0px;
   background-color: white;
   height: 300mm;
-  width: 203mm;
+  width: 210mm;
   color: black;
   box-shadow: 4px 0px 0 0 rgb(247, 247, 247);
 }
 
 .anillado {
-/*   background-color: white;
- */  height: 300mm;
-  width: 106px;
-  z-index: -1;
-  left: 2px;
+  height: 300mm;
+  width: 126px;
+  z-index: 1;
+  left: 30px;
+  bottom: 10px;
+}
+
+.anillado::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 100%;
+  border-right: 1px dashed #d3d3d3;
 }
 
 .encabezado{
@@ -111,7 +119,7 @@ body {
 .note {
   position: absolute;
   left: 248px;
-  top:116px;
+  top:117px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -142,7 +150,3 @@ body {
   height: 300mm;
   resize: none !important;
 }
-
-
-
-
