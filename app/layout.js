@@ -1,12 +1,15 @@
-import { Playpen_Sans, Pacifico, Lobster_Two, Merienda, Sofia } from "next/font/google";
+import { Playpen_Sans, Pacifico, Lobster_Two, Merienda, Sofia, Dosis, Plus_Jakarta_Sans, Oxygen } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 
 const playpen = Playpen_Sans({ subsets: ["latin"], weight: ['400'] });
+const oxygen = Oxygen({ subsets: ["latin"], weight: ['400'] });
+const dosis = Dosis({ subsets: ["latin"], weight: ['400'] }); /* ver oxygen */
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ['400'] });
 const pacifico = Pacifico({ subsets: ["latin"], weight: ['400'] });
 const lobster = Lobster_Two({ subsets: ["latin"], weight: ['400'] });
 const merienda = Merienda({ subsets: ["latin"], weight: ['400'] });
-const sofia = Sofia({ subsets: ["latin"], weight: ['400'], variable: '--font-sofia' });
+const sofia = Sofia({ subsets: ["latin"], weight: ['400'] });
 
 
 
