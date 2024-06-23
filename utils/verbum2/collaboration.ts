@@ -1,20 +1,17 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-import {Provider} from '@lexical/yjs';
+import { Provider } from '@lexical/yjs';
 import { WebsocketProvider } from 'y-websocket';
 import { Doc } from 'yjs';
 
-const url = new URL(window.location.href);
-const params = new URLSearchParams(url.search);
-const WEBSOCKET_ENDPOINT = 'ws://localhost:1234';
-const WEBSOCKET_SLUG = 'playground';
-const WEBSOCKET_ID = params.get('collabId') || '0';
+let WEBSOCKET_ENDPOINT = 'ws://localhost:1234';
+let WEBSOCKET_SLUG = 'playground';
+let WEBSOCKET_ID = '0';
+
+// Verificar si estamos en un entorno de navegador
+if (typeof window !== 'undefined') {
+  const url = new URL(window.location.href);
+  const params = new URLSearchParams(url.search);
+  WEBSOCKET_ID = params.get('collabId') || '0';
+}
 
 // parent dom -> child doc
 export function createWebsocketProvider(
@@ -30,7 +27,6 @@ export function createWebsocketProvider(
     doc.load();
   }
 
-  
   // @ts-ignore
   return new WebsocketProvider(
     WEBSOCKET_ENDPOINT,

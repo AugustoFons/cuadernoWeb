@@ -1,13 +1,4 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
 import type { LexicalCommand, LexicalEditor, RangeSelection } from 'lexical';
-
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import {
   $getSelection,
@@ -41,25 +32,26 @@ const VOICE_COMMANDS: Readonly<
 };
 
 export const SUPPORT_SPEECH_RECOGNITION: boolean =
-  'SpeechRecognition' in window || 'webkitSpeechRecognition' in window;
+  typeof window !== 'undefined' && ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
 
 function SpeechToTextPlugin(): null {
   const [editor] = useLexicalComposerContext();
   const [isEnabled, setIsEnabled] = useState<boolean>(false);
   const SpeechRecognition =
+    typeof window !== 'undefined' &&
     // @ts-ignore
-    window.SpeechRecognition || window.webkitSpeechRecognition;
+    (window.SpeechRecognition || window.webkitSpeechRecognition);
   const recognition = useRef<typeof SpeechRecognition | null>(null);
   const report = useReport();
 
   useEffect(() => {
-    if (isEnabled && recognition.current === null) {
+    if (isEnabled && recognition.current === null && SpeechRecognition) {
       recognition.current = new SpeechRecognition();
       recognition.current.continuous = true;
       recognition.current.interimResults = true;
       recognition.current.addEventListener(
         'result',
-        (event: typeof SpeechRecognition) => {
+        (event: any) => {
           const resultItem = event.results.item(event.resultIndex);
           const { transcript } = resultItem.item(0);
           report(transcript);
@@ -104,6 +96,7 @@ function SpeechToTextPlugin(): null {
       }
     };
   }, [SpeechRecognition, editor, isEnabled, report]);
+
   useEffect(() => {
     return editor.registerCommand(
       SPEECH_TO_TEXT_COMMAND,
