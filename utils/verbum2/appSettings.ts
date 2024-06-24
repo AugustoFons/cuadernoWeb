@@ -13,7 +13,7 @@ export type SettingName =
 export type Settings = Record<SettingName, boolean>;
 
 let hostName = '';
-let isDevPlayground = false;
+export let isDevPlayground = false;
 
 // Verificar si estamos en un entorno de navegador
 if (typeof window !== 'undefined') {
