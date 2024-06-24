@@ -369,11 +369,14 @@ function TableCellResizer({ editor }: { editor: LexicalEditor }): JSX.Element {
   );
 }
 
-export default function TableCellResizerPlugin(): ReactPortal {
+export default function TableCellResizerPlugin(): ReactPortal | null {
   const [editor] = useLexicalComposerContext();
 
-  return useMemo(
-    () => createPortal(<TableCellResizer editor={editor} />, document.body),
-    [editor]
-  );
+  return useMemo(() => {
+    if (typeof document !== 'undefined') {
+      return createPortal(<TableCellResizer editor={editor} />, document.body);
+    } else {
+      return null;
+    }
+  }, [editor]);
 }

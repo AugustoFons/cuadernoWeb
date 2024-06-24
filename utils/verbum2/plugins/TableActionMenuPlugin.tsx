@@ -592,6 +592,11 @@ function TableCellActionMenuContainer(): JSX.Element {
   );
 }
 
-export default function TableActionMenuPlugin(): ReactPortal {
-  return createPortal(<TableCellActionMenuContainer />, document.body);
+
+export default function TableActionMenuPlugin(): ReactPortal | null {
+  if (typeof document !== 'undefined') {
+    return createPortal(<TableCellActionMenuContainer />, document.body);
+  } else {
+    return null;
+  }
 }
