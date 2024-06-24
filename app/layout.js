@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={playpen.className}>
+      <body className={playpen.className} >
       <Image 
           src='/assets/esc.png'
           width={206}

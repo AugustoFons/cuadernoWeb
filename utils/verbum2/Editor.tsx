@@ -39,7 +39,11 @@ import EditorContext from './context/EditorContext';
 import { EditorState, LexicalEditor } from 'lexical';
 import { useTranslation } from 'react-i18next';
 import DragDropPaste from './plugins/DragDropPastePlugin';
-import EmojiPickerPlugin from './plugins/EmojiPickerPlugin';
+import dynamic from 'next/dynamic';
+
+const EmojiPickerPlugin = dynamic(() => import('./plugins/EmojiPickerPlugin'), {
+  ssr: false,
+});
 
 interface IEditorProps {
   children?: ReactNode;
