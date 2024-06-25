@@ -1,4 +1,9 @@
-import NoteViewer from "@/components/Editor";
+'use client'
+import dynamic from 'next/dynamic';
+
+const NoteViewer = dynamic(() => import('@/components/Editor'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

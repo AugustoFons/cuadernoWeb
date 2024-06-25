@@ -26,6 +26,7 @@ import CharacterStylesPopupPlugin from './plugins/CharacterStylesPopupPlugin';
 import ClickableLinkPlugin from './plugins/ClickableLinkPlugin';
 import CodeHighlightPlugin from './plugins/CodeHighlightPlugin';
 import EmojisPlugin from './plugins/EmojisPlugin';
+import EmojiPickerPlugin from './plugins/EmojiPickerPlugin';
 import KeywordsPlugin from './plugins/KeywordsPlugin';
 import ListMaxIndentLevelPlugin from './plugins/ListMaxIndentLevelPlugin';
 import MarkdownShortcutPlugin from './plugins/MarkdownShortcutPlugin';
@@ -39,11 +40,6 @@ import EditorContext from './context/EditorContext';
 import { EditorState, LexicalEditor } from 'lexical';
 import { useTranslation } from 'react-i18next';
 import DragDropPaste from './plugins/DragDropPastePlugin';
-import dynamic from 'next/dynamic';
-
-const EmojiPickerPlugin = dynamic(() => import('./plugins/EmojiPickerPlugin'), {
-  ssr: false,
-});
 
 interface IEditorProps {
   children?: ReactNode;
