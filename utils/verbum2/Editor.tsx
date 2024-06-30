@@ -57,13 +57,13 @@ interface IEditorProps {
 
 const Editor = ({
   children,
-  hashtagsEnabled = true,
-  autoLinkEnabled = true,
-  emojisEnabled = true,
-  emojiPickerEnabled = true,
+  hashtagsEnabled = false,
+  autoLinkEnabled = false,
+  emojisEnabled = false,
+  emojiPickerEnabled = false,
   actionsEnabled = true,
   listMaxIndent = 7,
-  placeholder = 'Bienvenido!!!',
+  placeholder = '',
   isEditable = true,
   locale = null,
   onChange,

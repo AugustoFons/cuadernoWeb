@@ -51,17 +51,6 @@ function InsertImageDialog({
       {!mode && (
         <div className="ToolbarPlugin__dialogButtonsList">
           <Button
-            data-test-id="image-modal-option-sample"
-            onClick={() =>
-              onClick({
-                altText: 'Yellow flower in tilt shift lens',
-                src: null, //yellowFlowerImage,
-              })
-            }
-          >
-            Sample
-          </Button>
-          <Button
             data-test-id="image-modal-option-url"
             onClick={() => setMode('url')}
           >
@@ -317,12 +306,12 @@ export interface IInsertDropdownProps {
 
 const InsertDropdown: React.FC<IInsertDropdownProps> = ({
   enableTable = true,
-  enableImage = { enable: true, maxWidth: 1000 },
-  enableYoutube = false,
+  enableImage = { enable: true, maxWidth: 700 },
+  enableYoutube = true,
   enableTwitter = false,
-  enablePoll = false,
+  enablePoll = true,
   enableHorizontalRule = false,
-  enableStickyNote = false,
+  enableStickyNote = true,
 }: IInsertDropdownProps) => {
   const { initialEditor, activeEditor } = useContext(EditorContext);
   const [modal, showModal] = useModal();

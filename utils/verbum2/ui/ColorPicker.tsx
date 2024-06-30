@@ -1,10 +1,3 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
 
 import './ColorPicker.css';
 
@@ -40,10 +33,12 @@ const basicColors = [
   '#4a4a4a',
   '#9b9b9b',
   '#00000000',
+  '#ffffff',
+
 ];
 
-const WIDTH = 214;
-const HEIGHT = 150;
+const WIDTH = 234;
+const HEIGHT = 170;
 
 export default function ColorPicker({
   color,
