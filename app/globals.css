@@ -141,11 +141,4 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   z-index: 10 !important;
-  
-}
-
-.ContentEditable__root{
-  font-size: 20px !important;
-  height: 300mm;
-  resize: none !important;
 }

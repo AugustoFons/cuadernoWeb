@@ -13,6 +13,7 @@ import { HashtagPlugin } from '@lexical/react/LexicalHashtagPlugin';
 import { LinkPlugin } from '@lexical/react/LexicalLinkPlugin';
 import { ListPlugin } from '@lexical/react/LexicalListPlugin';
 import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin';
+import { CharacterLimitPlugin } from '@lexical/react/LexicalCharacterLimitPlugin';
 import { OnChangePlugin } from '@lexical/react/LexicalOnChangePlugin';
 import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary';
 import React, { ReactNode, useEffect, useState } from 'react';
@@ -108,6 +109,10 @@ const Editor = ({
             placeholder={placeholderComponent}
             ErrorBoundary={LexicalErrorBoundary}
           />
+{/*           <CharacterLimitPlugin
+          charset="UTF-8" 
+          maxLength={100}
+          /> */}
           <OnChangePlugin
             onChange={(editorState) => {
               onChange?.(JSON.stringify(editorState), activeEditor);

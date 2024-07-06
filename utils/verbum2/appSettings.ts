@@ -12,7 +12,7 @@ export type SettingName =
 
 export type Settings = Record<SettingName, boolean>;
 
-let hostName = '';
+let hostName = 'playground.lexical.dev';
 export let isDevPlayground = false;
 
 // Verificar si estamos en un entorno de navegador
@@ -27,7 +27,7 @@ export const DEFAULT_SETTINGS: Settings = {
   disableBeforeInput: false,
   emptyEditor: isDevPlayground,
   isAutocomplete: false,
-  isCharLimit: false,
+  isCharLimit: true,
   isCharLimitUtf8: false,
   isCollab: false,
   isRichText: true,
