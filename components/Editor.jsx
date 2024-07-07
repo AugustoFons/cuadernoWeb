@@ -21,7 +21,6 @@ import {
 const NoteViewer = () => {
 
 
-
   return (
     <EditorComposer  >
       <Editor>

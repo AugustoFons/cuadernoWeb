@@ -1,11 +1,3 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
 import { useEffect, useRef, useState } from 'react';
 import * as React from 'react';
 import { createPortal } from 'react-dom';
@@ -29,16 +21,28 @@ export default function DropDown({
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const [showDropDown, setShowDropDown] = useState(false);
 
+  const margin = 66; // Margen de 10px
+
   useEffect(() => {
     const button = buttonRef.current;
     const dropDown = dropDownRef.current;
 
     if (showDropDown && button !== null && dropDown !== null) {
-      const { top, left } = button.getBoundingClientRect();
-      dropDown.style.top = `${top + 40}px`;
+      const { top, left, height } = button.getBoundingClientRect();
+      const dropDownHeight = dropDown.offsetHeight;
+      const spaceAbove = top - dropDownHeight - margin;
+      const spaceBelow = window.innerHeight - (top + height + dropDownHeight + margin);
+
+      dropDown.style.position = 'fixed';
+
+      if (spaceBelow > spaceAbove || spaceAbove < 0) {
+        dropDown.style.top = `${top + height + margin}px`;
+      } else {
+        dropDown.style.top = `${top - dropDownHeight - margin}px`;
+      }
       dropDown.style.left = `${Math.min(
-        left,
-        window.innerWidth - dropDown.offsetWidth - 20
+        left - 50,
+        window.innerWidth - dropDown.offsetWidth
       )}px`;
     }
   }, [dropDownRef, buttonRef, showDropDown]);
@@ -50,7 +54,7 @@ export default function DropDown({
       const handle = (event: MouseEvent) => {
         const target = event.target;
         if (stopCloseOnClickSelf) {
-          if (dropDownRef.current.contains(target as Node)) return;
+          if (dropDownRef.current && dropDownRef.current.contains(target as Node)) return;
         }
         if (!button.contains(target as Node)) {
           setShowDropDown(false);
@@ -90,3 +94,4 @@ export default function DropDown({
     </>
   );
 }
+

@@ -7,9 +7,9 @@
  *
  */
 
- .ContentEditable__root {
+.ContentEditable__root {
   height: 280mm;
-  border: 2px solid black;
+  border: 0px;
   cursor: text;
   display: block;
   position: relative;
