@@ -21,7 +21,7 @@ export default function DropDown({
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const [showDropDown, setShowDropDown] = useState(false);
 
-  const margin = 66; // Margen de 10px
+  const margin = 6; // Margen de 10px
 
   useEffect(() => {
     const button = buttonRef.current;
