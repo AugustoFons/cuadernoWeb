@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Simula 2 segundos de carga
+    }, 3000); // Simula 2 segundos de carga
 
     return () => clearTimeout(timeout);
   }, []);

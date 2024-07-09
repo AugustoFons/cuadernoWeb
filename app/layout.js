@@ -22,14 +22,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={playpen.className} >
-{/*       <Image 
-          src='/assets/esc.png'
-          width={206}
-          height={120}
-          alt="line"
-          className="ml-1 pt-0 pb-3 h-[104px] w-[190px]"
-          style={{zIndex: '100'}}
-          /> */}
         {children}
       </body>
     </html>
