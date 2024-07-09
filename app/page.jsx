@@ -1,17 +1,36 @@
 'use client'
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import Loading from '../components/SpinnerFeed';
+
 
 const NoteViewer = dynamic(() => import('@/components/Editor'), {
-  ssr: false,
+  ssr: false
 });
 
 export default function Home() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Simula 2 segundos de carga
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+
   return (
     <>
       <main className="flex min-h-screen w-full py-4">
-      <div className="note">
-      <NoteViewer/>
-      </div>
+      {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+          <div className="note">
+            <NoteViewer />
+          </div>
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <section style={{display: 'flex', zIndex:1}}>
             <div className='' style={{position: 'relative', flex:1}}>
@@ -37,6 +56,9 @@ export default function Home() {
             </div>
         </section>
     </ div>
+    </>
+    )}
+
     </main>
     </>
 
