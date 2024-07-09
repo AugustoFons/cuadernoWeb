@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Simula 2 segundos de carga
+    }, 3800); // Simula 2 segundos de carga
 
     return () => clearTimeout(timeout);
   }, []);
@@ -23,10 +23,14 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen w-full py-4">
-      {isLoading ? (
+    {isLoading ? (
+      <div className=' w-full flex justify-center'>
           <Loading />
-        ) : (
+
+      </div>
+        )
+        : (
+      <main className="flex min-h-screen w-full">
           <>
           <div className="note">
             <NoteViewer />
@@ -57,9 +61,9 @@ export default function Home() {
         </section>
     </ div>
     </>
+    </main>
     )}
 
-    </main>
     </>
 
   );
