@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  zoom: 0.9;
+  zoom: 1;
   padding-top: 70px;
 }
 
@@ -119,7 +119,7 @@ body {
 .note {
   position: absolute;
   left: 248px;
-  top:133.5px;
+  top:157.5px;
 }
 .editor-shell {
   margin: 20px auto;
@@ -135,8 +135,8 @@ body {
 
 .editor-shell .editor-container {
   background: transparent !important;
-  position: relative;
-  left: -39.5px;
+  position: absolute;
+  left: -39.8px;
   padding: 0mm 1.5mm !important;
   height: 272mm;
   width: 190mm;
