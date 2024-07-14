@@ -9,14 +9,6 @@
   line-height: 8mm !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   background-color: #FADD99;
   font-size: 20px !important;
@@ -24,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  zoom: 1;
   padding-top: 70px;
 }
 
@@ -124,13 +115,10 @@ body {
 .editor-shell {
   margin: 20px auto;
   border-radius: 2px;
-  max-width: 1000px;
   color: #000;
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  width: 100%;
 }
 
 .editor-shell .editor-container {

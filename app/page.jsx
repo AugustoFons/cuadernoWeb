@@ -30,7 +30,7 @@ export default function Home() {
       </div>
         )
         : (
-      <main className="flex min-h-screen w-96">
+      <main className="flex">
           <>
           <div className="note">
             <NoteViewer />
