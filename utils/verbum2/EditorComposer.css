@@ -887,9 +887,19 @@ i.gif {
 }
 
 .actions {
-  position: relative;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 800px;
+  width: 100px;
   padding: 10px;
+  position: fixed;
+  top: -100px;
+  left: -2px;
+  row-gap: 10px;
+  background-image: url('/assets/natural_paper.png');
 }
 
 .actions i {
@@ -897,7 +907,6 @@ i.gif {
   display: inline-block;
   height: 15px;
   width: 15px;
-  vertical-align: -0.25em;
 }
 
 .actions i.indent {
@@ -979,14 +988,14 @@ i.chevron-down {
 }
 
 .action-button {
-  background-color: #eee;
+  background-color: #fff;
   border: 0;
-  padding: 8px 12px;
+  padding: 8px 10px;
   position: relative;
-  margin-left: 5px;
+  padding-bottom: 11px;
   border-radius: 15px;
+  width: 40px;
   color: #222;
-  display: inline-block;
   cursor: pointer;
 }
 
@@ -1088,7 +1097,7 @@ button.action-button:disabled {
   position: fixed;
   top: 0px;
   left: 0px;
-  max-width: 100%; /* Asegura que ocupe todo el ancho en dispositivos pequeños */
+  width: 100%; /* Asegura que ocupe todo el ancho en dispositivos pequeños */
   height: max-content;
   z-index: 20;
   align-items: center;

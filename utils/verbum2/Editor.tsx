@@ -93,6 +93,7 @@ const Editor = ({
     >
       {children}
       <div className={`editor-container`}>
+        {actionsEnabled && <ActionsPlugin isRichText={isRichText} />}
         <AutoFocusPlugin />
         <ClearEditorPlugin />
         {hashtagsEnabled && <HashtagPlugin />}
@@ -131,7 +132,6 @@ const Editor = ({
         </>
 
         <HistoryPlugin externalHistoryState={historyState} />
-        {actionsEnabled && <ActionsPlugin isRichText={isRichText} />}
       </div>
     </EditorContext.Provider>
   );
