@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Loading from '../components/SpinnerFeed';
-
+import Image from 'next/image';
 
 const NoteViewer = dynamic(() => import('@/components/Editor'), {
   ssr: false
@@ -31,6 +31,16 @@ export default function Home() {
         )
         : (
       <main className="flex">
+          <div className='bg-white w-[109px] h-[104px] z-50 rounded-full absolute -top-[-13px] border-2 border-black logo'>
+            <Image 
+            src='/assets/escc.png'
+            width={440}
+            height={242}
+            alt="line"
+            className="h-[62px] w-[99px] absolute top-6 left-[1px] "
+            quality={100}
+            />
+            </div>
           <>
           <div className="note">
             <NoteViewer />
