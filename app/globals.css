@@ -12,8 +12,8 @@
 body {
   background-color: #FADD99;
   font-size: 20px !important;
-/*   background-image: url('/assets/tabla.jpg');
- */  background-repeat: no-repeat;
+  background-image: url('/assets/tabla.jpg');
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding-top: 70px;
@@ -112,8 +112,8 @@ body {
 
 .note {
   position: absolute;
-  left: 248px;
-  top:180.5px;
+  left: 270px;
+  top:188px;
 }
 .editor-shell {
   margin: 20px auto;
