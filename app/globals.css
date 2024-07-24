@@ -12,8 +12,8 @@
 body {
   background-color: #FADD99;
   font-size: 20px !important;
-  background-image: url('/assets/tabla.jpg');
-  background-repeat: no-repeat;
+/*   background-image: url('/assets/tabla.jpg');
+ */  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding-top: 70px;
