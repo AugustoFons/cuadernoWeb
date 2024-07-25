@@ -889,24 +889,22 @@ i.gif {
 .actions {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 600px;
+  height: max-content;
   padding: 10px;
   padding-top: 30px;
   position: absolute;
-  top: -170px;
-  left: -194px;
+  top: -40px;
+  left: -179px;
   row-gap: 10px;
   padding: 10px;
-  border: 4px solid #020248;
-  border-radius: 50px;
-  width: 90px;
+  border: 1px solid #020248;
+  border-radius: 10px;
+  width: max-content;
   z-index: 20;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  cursor: url('/assets/hand.png'), move;
   background-image: url('/assets/natural_paper.png');
 /*   background-image: url('/assets/natural_paper.png');
  */}
@@ -997,15 +995,14 @@ i.chevron-down {
 }
 
 .action-button {
-  background-color: #fff;
+  background-color: #ffffff4a;
   border-radius: 50px ;
-  padding: 4px 0px;
-  padding-left: 0.5px;
-  position: relative;
-  padding-bottom: 14px;
   border-radius: 15px;
-  width: 46px;
-  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
   cursor: pointer;
 /*   border: 4px solid #020248;
  */

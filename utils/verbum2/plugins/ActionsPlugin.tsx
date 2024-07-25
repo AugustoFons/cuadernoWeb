@@ -37,6 +37,7 @@ import {
 } from './SpeechToTextPlugin';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
+import Draggable from 'react-draggable';
 
 export default function ActionsPlugin({
   isRichText,
@@ -112,7 +113,9 @@ export default function ActionsPlugin({
   }, [editor]);
 
   return (
-    <div className="actions">
+    <Draggable>
+
+    <div className="actions cursor-grab">
       {SUPPORT_SPEECH_RECOGNITION && (
         <button
           onClick={() => {
@@ -212,6 +215,8 @@ export default function ActionsPlugin({
       )}
       {modal}
     </div>
+    </Draggable>
+
   );
 }
 
