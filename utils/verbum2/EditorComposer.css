@@ -904,10 +904,17 @@ i.gif {
   z-index: 20;
   align-items: center;
   justify-content: center;
-  cursor: url('/assets/hand.png'), move;
   background-image: url('/assets/natural_paper.png');
-/*   background-image: url('/assets/natural_paper.png');
- */}
+}
+
+.cursor-grab {
+  cursor: url('/assets/handOpen.png'), move;
+
+}
+
+.cursor-grab:active {
+  cursor: url('/assets/grabCursor.png'), move;
+}
 
 .actions i {
   background-size: contain;

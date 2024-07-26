@@ -38,6 +38,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
 import Draggable from 'react-draggable';
+import Image from 'next/image';
 
 export default function ActionsPlugin({
   isRichText,
@@ -113,9 +114,17 @@ export default function ActionsPlugin({
   }, [editor]);
 
   return (
-    <Draggable>
+    <Draggable handle=".handle">
 
-    <div className="actions cursor-grab">
+    <div className="actions">
+      <button className='handle cursor-grab'>
+      <Image 
+            src='/assets/move.png'
+            width={24}
+            height={24}
+            alt="line"
+            />
+      </button>
       {SUPPORT_SPEECH_RECOGNITION && (
         <button
           onClick={() => {
