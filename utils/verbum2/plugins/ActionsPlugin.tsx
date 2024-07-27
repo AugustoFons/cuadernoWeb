@@ -117,13 +117,8 @@ export default function ActionsPlugin({
     <Draggable handle=".handle">
 
     <div className="actions">
-      <button className='handle cursor-grab'>
-      <Image 
-            src='/assets/move.png'
-            width={24}
-            height={24}
-            alt="line"
-            />
+      <button className='handle move-button' style={{borderTopLeftRadius: '10px', borderTopRightRadius: '10px'}}>
+        <i className="move" />
       </button>
       {SUPPORT_SPEECH_RECOGNITION && (
         <button
@@ -202,6 +197,9 @@ export default function ActionsPlugin({
         type="button"
       >
         <i className="markdown" />
+      </button>
+      <button className='handle move-button' style={{borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px'}}>
+        <i className="move" />
       </button>
       {isCollab && (
         <button

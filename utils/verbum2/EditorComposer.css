@@ -353,6 +353,12 @@ i.mic {
   background-image: url(images/icons/mic.svg);
 }
 
+i.move {
+  background-image: url('/assets/move.svg');
+  height: 24px;
+  width: 24px;
+}
+
 i.import {
   background-image: url(images/icons/upload.svg);
 }
@@ -891,13 +897,10 @@ i.gif {
   flex-direction: column;
   text-align: center;
   height: max-content;
-  padding: 10px;
-  padding-top: 30px;
   position: absolute;
   top: -40px;
   left: -179px;
   row-gap: 10px;
-  padding: 10px;
   border: 1px solid #020248;
   border-radius: 10px;
   width: max-content;
@@ -907,20 +910,11 @@ i.gif {
   background-image: url('/assets/natural_paper.png');
 }
 
-.cursor-grab {
-  cursor: url('/assets/handOpen.png'), move;
-
-}
-
-.cursor-grab:active {
-  cursor: url('/assets/grabCursor.png'), move;
-}
-
 .actions i {
   background-size: contain;
   display: inline-block;
-  height: 15px;
-  width: 15px;
+/*   height: 15px;
+  width: 15px; */
 }
 
 .actions i.indent {
@@ -1011,11 +1005,23 @@ i.chevron-down {
   height: 36px;
   width: 36px;
   cursor: pointer;
-/*   border: 4px solid #020248;
- */
 }
 
-.action-button:hover {
+.move-button {
+  background-color: #ffffffa2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 52px;
+  cursor: url('/assets/grabOpen.png'), move;
+}
+
+.move-button:active {
+  cursor: url('/assets/grabClose.png'), move;
+}
+
+.action-button:hover, .move-button:hover {
   background-color: #ddd;
   color: #000;
 }
