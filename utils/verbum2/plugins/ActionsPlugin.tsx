@@ -7,13 +7,7 @@
  */
 
 import type { LexicalEditor } from 'lexical';
-
-import { $createCodeNode, $isCodeNode } from '@lexical/code';
 import { exportFile, importFile } from '@lexical/file';
-import {
-  $convertFromMarkdownString,
-  $convertToMarkdownString,
-} from '@lexical/markdown';
 import { useCollaborationContext } from '@lexical/react/LexicalCollaborationContext';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { mergeRegister } from '@lexical/utils';
@@ -30,7 +24,6 @@ import { useCallback, useEffect, useState } from 'react';
 
 import useModal from '../hooks/useModal';
 import Button from '../ui/Button';
-import { PLAYGROUND_TRANSFORMERS } from './MarkdownTransformers';
 import {
   SPEECH_TO_TEXT_COMMAND,
   SUPPORT_SPEECH_RECOGNITION,
@@ -38,7 +31,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
 import Draggable from 'react-draggable';
-import Image from 'next/image';
 
 export default function ActionsPlugin({
   isRichText,
@@ -91,7 +83,7 @@ export default function ActionsPlugin({
       });
     });
   }, [editor]);
-
+/* 
   const handleMarkdownToggle = useCallback(() => {
     editor.update(() => {
       const root = $getRoot();
@@ -111,11 +103,10 @@ export default function ActionsPlugin({
       }
       root.selectEnd();
     });
-  }, [editor]);
+  }, [editor]); */
 
   return (
     <Draggable handle=".handle">
-
     <div className="actions">
       <button className='handle move-button' style={{borderTopLeftRadius: '10px', borderTopRightRadius: '10px'}}>
         <i className="move" />
@@ -188,15 +179,6 @@ export default function ActionsPlugin({
         type="button"
       >
         <i className={isEditable ? 'unlock' : 'lock'} />
-      </button>
-      <button
-        className="action-button"
-        onClick={handleMarkdownToggle}
-        title={t('action:Convert_From_Markdown')}
-        aria-label={t('action:Convert_From_Markdown_Description')}
-        type="button"
-      >
-        <i className="markdown" />
       </button>
       <button className='handle move-button' style={{borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px'}}>
         <i className="move" />

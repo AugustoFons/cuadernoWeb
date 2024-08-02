@@ -66,7 +66,7 @@ interface IToolbarProps {
 
 const ToolbarPlugin = ({
   children,
-  defaultFontSize = '20px',
+  defaultFontSize = '18px',
   defaultFontColor = '#000',
   defaultBgColor = 'transparent',
   defaultFontFamily = '"__Playpen_Sans_f6f7db", "__Playpen_Sans_Fallback_f6f7db"',
